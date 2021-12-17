@@ -8,6 +8,7 @@ if fn.empty(fn.glob(install_path)) > 0 then
 end
 
 return require('packer').startup(function()
+  -- Load all the plugins
   use 'wbthomason/packer.nvim'
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
   use 'sjl/splice.vim'
@@ -18,7 +19,6 @@ return require('packer').startup(function()
     end
   }
   use 'blackCauldron7/surround.nvim'
-  use 'neovim/nvim-lspconfig'
   --[[ use {
     'hrsh7th/nvim-compe',
     after = 'nvim-lspconfig',
@@ -40,7 +40,12 @@ return require('packer').startup(function()
         server:setup(opts)
       end)
     end,
-    after = 'nvim-lspconfig'
+    requires = {
+      'neovim/nvim-lspconfig'
+    },
+    after = {
+      'nvim-lspconfig'
+    }
   }
   use 'vim-syntastic/syntastic'
   use 'fsharp/vim-fsharp'
