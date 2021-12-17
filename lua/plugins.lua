@@ -35,8 +35,10 @@ return require('packer').startup(function()
     'williamboman/nvim-lsp-installer',
     config = function()
       local lspinstall = require('nvim-lsp-installer')
+      local cmp = require('cmp_nvim_lsp')
       lspinstall.on_server_ready(function(server)
         local opts = {}
+        opts.capabilities = cmp.update_capabilities(vim.lsp.protocol.make_client_capabilities())
         server:setup(opts)
       end)
     end,
@@ -44,7 +46,8 @@ return require('packer').startup(function()
       'neovim/nvim-lspconfig'
     },
     after = {
-      'nvim-lspconfig'
+      'nvim-lspconfig',
+      'nvim-cmp'
     }
   }
   use 'vim-syntastic/syntastic'
@@ -96,11 +99,6 @@ return require('packer').startup(function()
           { name = 'cmdline' }
         })
       })
-
-      local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
-      require('lspconfig').sumneko_lua.setup {
-        capabilities = capabilities
-      }
     end
   }
   use {
