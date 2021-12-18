@@ -17,6 +17,35 @@ return require('packer').startup(function()
       vim.cmd("colorscheme dracula")
     end
   }
+  use {
+    "lazytanuki/nvim-mapper",
+    config = function()
+      local M = require("nvim-mapper")
+      M.setup({
+        -- do not assign the default keymap (<leader>MM)
+        no_map = false,
+        -- where should ripgrep look for your keybinds definitions.
+        -- Default config search path is ~/.config/nvim/lua
+        -- search_path = vim.fn.stdpath('config').."\\lua",
+        search_path = "c:\\users\\ilkka.poutanen\\appdata\\local\\nvim\\lua",
+        -- what should be done with the selected keybind when pressing enter.
+        -- Available actions:
+        --   * "definition" - Go to keybind definition (default)
+        --   * "execute" - Execute the keybind command
+        action_on_enter = "execute",
+      })
+
+      -- mappings! This is _not_ the place for them tho
+      -- need to figure out this organisation
+      local opts = {silent = true, noremap = true}
+      M.map('n', '<leader>P', ":MarkdownPreview<CR>", opts, "Markdown", "md_preview", "Display Markdown preview in Qutebrowser")
+      M.map("n", "<leader>.", "<cmd>Telescope file_browser<CR>", opts, "Editor", "file_browser", "Browse files")
+      M.map("n", "<leader>,", "<cmd>Telescope buffers show_all_buffers=true<CR>", opts, "Movement", "switch_buffers", "Switch buffers")
+      M.map("n", "<leader>/", "<cmd>Telescope live_grep<CR>", opts, "Editor", "live_grep", "Search a word")
+      M.map("n", "<leader>:", "<cmd>Telescope command_history<CR>", opts, "Editor", "command_history", "Command history")
+    end,
+    before = "telescope.nvim"
+  }
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
   use 'sjl/splice.vim'
   use {
