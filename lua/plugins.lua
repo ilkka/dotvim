@@ -55,18 +55,6 @@ return require('packer').startup(function()
     end
   }
   use 'blackCauldron7/surround.nvim'
-  --[[ use {
-    'hrsh7th/nvim-compe',
-    after = 'nvim-lspconfig',
-    requires = {
-      {
-        'ray-x/lsp_signature.nvim',
-        config = function()
-          require('lsp_signature').on_attach()
-        end
-      }
-    }
-  } ]]
   use {
     'williamboman/nvim-lsp-installer',
     config = function()
