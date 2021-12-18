@@ -10,6 +10,13 @@ end
 return require('packer').startup(function()
   -- Load all the plugins
   use 'wbthomason/packer.nvim'
+
+  use {
+    'dracula/vim',
+    config = function()
+      vim.cmd("colorscheme dracula")
+    end
+  }
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
   use 'sjl/splice.vim'
   use {
