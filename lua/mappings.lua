@@ -5,14 +5,14 @@ function mappings.define_mappings(mapper)
     -- Basic editor functions
     mapper.map("n", "<leader>Q", "<cmd>bufdo bdelete<CR>", opts, "Editor", "close_all_buffers", "Close all buffers")
     mapper.map("n", "<leader>k", "<cmd>nohlsearch<CR>", opts, "Editor", "no_search_highlight", "Turn off search highlights")
-    mapper.map("v", "<", "<gv", opts, "Editor", "Unindent selection")
-    mapper.map("v", ">", ">gv", opts, "Editor", "Indent selection")
+    mapper.map("v", "<", "<gv", opts, "Editor", "unindent_selection", "Unindent selection")
+    mapper.map("v", ">", ">gv", opts, "Editor", "indent_selection", "Indent selection")
 
     -- Movement
-    mapper.map("n", "<C-h>", "<C-w>h", opts, "Movement", "Switch window left")
-    mapper.map("n", "<C-j>", "<C-w>j", opts, "Movement", "Switch window down")
-    mapper.map("n", "<C-k>", "<C-w>k", opts, "Movement", "Switch window up")
-    mapper.map("n", "<C-l>", "<C-w>l", opts, "Movement", "Switch window right")
+    mapper.map("n", "<C-h>", "<C-w>h", opts, "Movement", "win_h", "Switch window left")
+    mapper.map("n", "<C-j>", "<C-w>j", opts, "Movement", "win_j", "Switch window down")
+    mapper.map("n", "<C-k>", "<C-w>k", opts, "Movement", "win_k", "Switch window up")
+    mapper.map("n", "<C-l>", "<C-w>l", opts, "Movement", "win_l", "Switch window right")
 
     -- Telescope
     mapper.map("n", "<leader>.", "<cmd>Telescope file_browser<CR>", opts, "Editor", "file_browser", "Browse files")
