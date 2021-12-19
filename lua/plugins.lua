@@ -10,18 +10,18 @@ return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
 
     use(require('plugins.dracula'))
+    use(require('plugins.hop'))
+    use(require('plugins.kommentary'))
+    use(require('plugins.nvim-autopairs'))
+    use(require('plugins.nvim-cmp'))
+    use(require('plugins.nvim-lsp-installer'))
     use(require('plugins.nvim-mapper'))
     use(require('plugins.nvim-treesitter'))
     use(require('plugins.splice'))
-    use(require('plugins.hop'))
     use(require('plugins.surround'))
-    use(require('plugins.nvim-lsp-installer'))
     use(require('plugins.syntastic'))
-    use(require('plugins.vim-fsharp'))
-    use(require('plugins.kommentary'))
-    use(require('plugins.nvim-cmp'))
-    use(require('plugins.nvim-autopairs'))
     use(require('plugins.telescope'))
+    use(require('plugins.vim-fsharp'))
 
     -- auto sync if packer was bootstrapped
     if packer_bootstrap then
