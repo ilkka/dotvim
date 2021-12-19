@@ -28,6 +28,7 @@ return require('packer').startup(function(use)
     use(require('plugins.vim-floaterm'))
     use(require('plugins.vim-fsharp'))
     use(require('plugins.vim-gitgutter'))
+    use(require('plugins.vim-projectionist'))
     use(require('plugins.vim-vinegar'))
 
     -- auto sync if packer was bootstrapped
