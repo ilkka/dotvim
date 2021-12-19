@@ -24,8 +24,8 @@ return require('packer').startup(function()
         no_map = false,
         -- where should ripgrep look for your keybinds definitions.
         -- Default config search path is ~/.config/nvim/lua
-        -- search_path = vim.fn.stdpath('config').."\\lua",
-        search_path = "c:\\users\\ilkka.poutanen\\appdata\\local\\nvim\\lua",
+        search_path = vim.fn.stdpath('config').."\\lua",
+        -- search_path = "c:\\users\\ilkka.poutanen\\appdata\\local\\nvim\\lua",
         -- what should be done with the selected keybind when pressing enter.
         -- Available actions:
         --   * "definition" - Go to keybind definition (default)
