@@ -16,7 +16,6 @@ vim.g.maplocalleader = ','
 vim.opt.expandtab = true
 vim.opt.shiftwidth = 4
 vim.opt.softtabstop = 4
-vim.opt.hidden = true
 vim.opt.signcolumn = 'yes:2'
 vim.opt.relativenumber = true
 vim.opt.number = true
