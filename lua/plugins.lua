@@ -11,6 +11,8 @@ return require('packer').startup(function(use)
 
     use(require('plugins.dracula'))
     use(require('plugins.editorconfig'))
+    use(require('plugins.fugitive'))
+    use(require('plugins.heritage'))
     use(require('plugins.hop'))
     use(require('plugins.kommentary'))
     use(require('plugins.nvim-autopairs'))
