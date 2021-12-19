@@ -60,6 +60,14 @@ function mappings.define_mappings(mapper)
     mapper.map("t", "<F9>", "<C-\\><C-n><cmd>FloatermNext<CR>", opts, "Terminal", "floaterm_tnext", "Floaterm next")
     mapper.map("n", "<F12>", "<cmd>FloatermToggle<CR>", opts, "Terminal", "floaterm_toggle", "Floaterm toggle")
     mapper.map("t", "<F12>", "<C-\\><C-n><cmd>FloatermToggle<CR>", opts, "Terminal", "floaterm_ttoggle", "Floaterm toggle")
+
+    -- Bufferline
+    mapper.map("n", "]b", "<cmd>BufferLineCycleNext<CR>", opts, "Bufferline", "bufferline_next", "Move to next buffer")
+    mapper.map("n", "[b", "<cmd>BufferLineCyclePrev<CR>", opts, "Bufferline", "bufferline_prev", "Move to previous buffer")
+    mapper.map("n", "]B", "<cmd>BufferLineMoveNext<CR>", opts, "Bufferline", "bufferline_movenext", "Move buffer right")
+    mapper.map("n", "[B", "<cmd>BufferLineMovePrev<CR>", opts, "Bufferline", "bufferline_moveprev", "Move buffer left")
+    mapper.map("n", "be", "<cmd>BufferLineSortByExtension<CR>", opts, "Bufferline", "bufferline_sort_ext", "Sort buffers by ext")
+    mapper.map("n", "bd", "<cmd>BufferLineSortByDirectory<CR>", opts, "Bufferline", "bufferline_sort_dir", "Sort buffers by dir")
 end
 
 return mappings
