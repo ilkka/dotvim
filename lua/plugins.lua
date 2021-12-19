@@ -36,12 +36,13 @@ return require('packer').startup(function(use)
         require('packer').sync()
     end
 
-    vim.cmd([[
-    augroup packer_user_config
-    autocmd!
-    autocmd BufWritePost plugins.lua source <afile> | PackerCompile
-    augroup end
-    ]])
+    -- This somehow manages to break editing on this file after a save
+    -- vim.cmd([[
+    -- augroup packer_user_config
+    -- autocmd!
+    -- autocmd BufWritePost plugins.lua source <afile> | PackerCompile
+    -- augroup end
+    -- ]])
 end)
 
 -- vim: sw=4 sts=4 et nospell
