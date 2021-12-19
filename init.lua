@@ -33,4 +33,4 @@ vim.opt.sidescrolloff = 8
 
 require('plugins')
 
--- vim: sw=2 sts=2 et nospell
+-- vim: sw=4 sts=4 et nospell
