@@ -9,6 +9,7 @@ return require('packer').startup(function(use)
     -- Load all the plugins
     use 'wbthomason/packer.nvim'
 
+    use(require('plugins.bufferline'))
     use(require('plugins.dracula'))
     use(require('plugins.editorconfig'))
     use(require('plugins.fugitive'))
