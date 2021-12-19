@@ -10,6 +10,7 @@ return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
 
     use(require('plugins.dracula'))
+    use(require('plugins.editorconfig'))
     use(require('plugins.hop'))
     use(require('plugins.kommentary'))
     use(require('plugins.nvim-autopairs'))
