@@ -24,6 +24,7 @@ return require('packer').startup(function(use)
     use(require('plugins.surround'))
     use(require('plugins.syntastic'))
     use(require('plugins.telescope'))
+    use(require('plugins.vim-floaterm'))
     use(require('plugins.vim-fsharp'))
     use(require('plugins.vim-gitgutter'))
 

@@ -50,6 +50,16 @@ function mappings.define_mappings(mapper)
     mapper.map("n", "<leader>hk", "<cmd>HopLineBC<cr>", opts, "Movement", "hop_line_bc", "Go to line up")
     mapper.map("n", "<leader>hh", "<cmd>HopWordCurrentLineBC<cr>", opts, "Movement", "hop_word_current_line_bc", "Go backwards to word on line")
     mapper.map("n", "<leader>hl", "<cmd>HopWordCurrentLineAC<cr>", opts, "Movement", "hop_word_current_line_ac", "Go forwards to word on line")
+
+    -- Floaterm
+    mapper.map("n", "<F7>", "<cmd>FloatermNew<CR>", opts, "Terminal", "floaterm_new", "Floaterm new")
+    mapper.map("t", "<F7>", "<C-\\><C-n><cmd>FloatermNew<CR>", opts, "Terminal", "floaterm_tnew", "Floaterm new")
+    mapper.map("n", "<F8>", "<cmd>FloatermPrev<CR>", opts, "Terminal", "floaterm_prev", "Floaterm prev")
+    mapper.map("t", "<F8>", "<C-\\><C-n><cmd>FloatermPrev<CR>", opts, "Terminal", "floaterm_tprev", "Floaterm prev")
+    mapper.map("n", "<F9>", "<cmd>FloatermNext<CR>", opts, "Terminal", "floaterm_next", "Floaterm next")
+    mapper.map("t", "<F9>", "<C-\\><C-n><cmd>FloatermNext<CR>", opts, "Terminal", "floaterm_tnext", "Floaterm next")
+    mapper.map("n", "<F12>", "<cmd>FloatermToggle<CR>", opts, "Terminal", "floaterm_toggle", "Floaterm toggle")
+    mapper.map("t", "<F12>", "<C-\\><C-n><cmd>FloatermToggle<CR>", opts, "Terminal", "floaterm_ttoggle", "Floaterm toggle")
 end
 
 return mappings
