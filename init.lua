@@ -25,6 +25,11 @@ vim.opt.title = true
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 vim.cmd("syntax enable")
+vim.opt.wildmode = "longest:full,full"
+vim.opt.list = true
+vim.opt.listchars = "tab:► ,trail:␠,nbsp:␠,precedes:,extends:"
+vim.opt.scrolloff = 8
+vim.opt.sidescrolloff = 8
 
 require('plugins')
 
