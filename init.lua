@@ -4,11 +4,11 @@
 local vim = vim
 
 vim.cmd([[
-  rshada!
-  doautocmd BufRead
-  syntax on
-  filetype on
-  filetype plugin indent on
+    rshada!
+    doautocmd BufRead
+    syntax on
+    filetype on
+    filetype plugin indent on
 ]])
 
 vim.g.mapleader = ' '
