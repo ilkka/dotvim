@@ -17,6 +17,7 @@ function mappings.define_mappings(mapper)
     " open nonexistent files with gf
     map gf <cmd>edit <cfile><cr>
     ]])
+
     -- Basic editor functions
     mapper.map("n", "<leader>Q", "<cmd>bufdo bdelete<CR>", opts, "Editor", "close_all_buffers", "Close all buffers")
     mapper.map("n", "<leader>k", "<cmd>nohlsearch<CR>", opts, "Editor", "no_search_highlight", "Turn off search highlights")
@@ -39,6 +40,16 @@ function mappings.define_mappings(mapper)
     mapper.map("n", "<leader>gf", "<cmd>Git fetch --prune<CR>", opts, "Git", "git_fetch", "Git fetch")
     mapper.map("n", "<leader>gP", "<cmd>Git push<CR>", opts, "Git", "git_push", "Git push")
     mapper.map("n", "<leader>gp", "<cmd>Git pull --rebase<CR>", opts, "Git", "git_pull", "Git pull")
+
+    -- Movement
+    mapper.map("n", "<leader>hw", "<cmd>HopWord<cr>", opts, "Movement", "hop_word", "Go to word")
+    mapper.map("n", "<leader>hp", "<cmd>HopPattern<cr>", opts, "Movement", "hop_pattern", "Go to pattern")
+    mapper.map("n", "<leader>hc", "<cmd>HopChar1<cr>", opts, "Movement", "hop_char1", "Go to character")
+    mapper.map("n", "<leader>hc", "<cmd>HopChar2<cr>", opts, "Movement", "hop_char2", "Go to character pair")
+    mapper.map("n", "<leader>hj", "<cmd>HopLineAC<cr>", opts, "Movement", "hop_line_ac", "Go to line down")
+    mapper.map("n", "<leader>hk", "<cmd>HopLineBC<cr>", opts, "Movement", "hop_line_bc", "Go to line up")
+    mapper.map("n", "<leader>hh", "<cmd>HopWordCurrentLineBC<cr>", opts, "Movement", "hop_word_current_line_bc", "Go backwards to word on line")
+    mapper.map("n", "<leader>hl", "<cmd>HopWordCurrentLineAC<cr>", opts, "Movement", "hop_word_current_line_ac", "Go forwards to word on line")
 end
 
 return mappings
