@@ -40,6 +40,14 @@ return require('packer').startup(function()
       M.map("n", "<leader>,", "<cmd>Telescope buffers show_all_buffers=true<CR>", opts, "Movement", "switch_buffers", "Switch buffers")
       M.map("n", "<leader>/", "<cmd>Telescope live_grep<CR>", opts, "Editor", "live_grep", "Search a word")
       M.map("n", "<leader>:", "<cmd>Telescope command_history<CR>", opts, "Editor", "command_history", "Command history")
+      M.map("n", "<leader>Q", "<cmd>bufdo bdelete<CR>", opts, "Editor", "close_all_buffers", "Close all buffers")
+      M.map("n", "<leader>k", "<cmd>nohlsearch<CR>", opts, "Editor", "no_search_highlight", "Turn off search highlights")
+      M.map("n", "<C-h>", "<C-w>h", opts, "Movement", "Switch window left")
+      M.map("n", "<C-j>", "<C-w>j", opts, "Movement", "Switch window down")
+      M.map("n", "<C-k>", "<C-w>k", opts, "Movement", "Switch window up")
+      M.map("n", "<C-l>", "<C-w>l", opts, "Movement", "Switch window right")
+      M.map("v", "<", "<gv", opts, "Editor", "Unindent selection")
+      M.map("v", ">", ">gv", opts, "Editor", "Indent selection")
     end,
     before = "telescope.nvim"
   }
