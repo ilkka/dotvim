@@ -1,0 +1,1 @@
+return 'fsharp/vim-fsharp'
