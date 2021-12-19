@@ -1,3 +1,8 @@
+-- the LSP complains about an undefined global and I can't be
+-- arsed to explain to it that this is vim so this will at least
+-- limit the complaining to a single spot
+local vim = vim
+
 vim.cmd([[
   rshada!
   doautocmd BufRead
