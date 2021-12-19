@@ -25,6 +25,7 @@ return require('packer').startup(function(use)
     use(require('plugins.syntastic'))
     use(require('plugins.telescope'))
     use(require('plugins.vim-fsharp'))
+    use(require('plugins.vim-gitgutter'))
 
     -- auto sync if packer was bootstrapped
     if packer_bootstrap then
