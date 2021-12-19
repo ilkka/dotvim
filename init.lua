@@ -22,3 +22,5 @@ vim.opt.smartcase = true
 vim.cmd("syntax enable")
 
 require('plugins')
+
+-- vim: sw=2 sts=2 et nospell

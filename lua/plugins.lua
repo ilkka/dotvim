@@ -1,5 +1,3 @@
--- vim: sw=2 sts=2 et
-
 -- packer bootstrap (requires git in path)
 local fn = vim.fn
 local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
@@ -149,3 +147,5 @@ return require('packer').startup(function()
     augroup end
   ]])
 end)
+
+-- vim: sw=2 sts=2 et nospell
