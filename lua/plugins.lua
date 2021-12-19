@@ -36,7 +36,6 @@ return require('packer').startup(function()
       -- mappings! This is _not_ the place for them tho
       -- need to figure out this organisation
       local opts = {silent = true, noremap = true}
-      M.map('n', '<leader>P', ":MarkdownPreview<CR>", opts, "Markdown", "md_preview", "Display Markdown preview in Qutebrowser")
       M.map("n", "<leader>.", "<cmd>Telescope file_browser<CR>", opts, "Editor", "file_browser", "Browse files")
       M.map("n", "<leader>,", "<cmd>Telescope buffers show_all_buffers=true<CR>", opts, "Movement", "switch_buffers", "Switch buffers")
       M.map("n", "<leader>/", "<cmd>Telescope live_grep<CR>", opts, "Editor", "live_grep", "Search a word")
