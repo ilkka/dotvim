@@ -32,6 +32,7 @@ return require('packer').startup(function(use)
     use(require('plugins.plugin_vim-fsharp'))
     use(require('plugins.plugin_vim-gitgutter'))
     use(require('plugins.plugin_vim-projectionist'))
+    use(require('plugins.plugin_vim-test'))
     use(require('plugins.plugin_vim-vinegar'))
 
     -- auto sync if packer was bootstrapped

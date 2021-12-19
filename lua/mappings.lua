@@ -66,8 +66,16 @@ function mappings.define_mappings(mapper)
     mapper.map("n", "[b", "<cmd>BufferLineCyclePrev<CR>", opts, "Bufferline", "bufferline_prev", "Move to previous buffer")
     mapper.map("n", "]B", "<cmd>BufferLineMoveNext<CR>", opts, "Bufferline", "bufferline_movenext", "Move buffer right")
     mapper.map("n", "[B", "<cmd>BufferLineMovePrev<CR>", opts, "Bufferline", "bufferline_moveprev", "Move buffer left")
-    mapper.map("n", "be", "<cmd>BufferLineSortByExtension<CR>", opts, "Bufferline", "bufferline_sort_ext", "Sort buffers by ext")
-    mapper.map("n", "bd", "<cmd>BufferLineSortByDirectory<CR>", opts, "Bufferline", "bufferline_sort_dir", "Sort buffers by dir")
+    -- these need better maps, can't stand the delay after a plain 'b'
+    -- mapper.map("n", "be", "<cmd>BufferLineSortByExtension<CR>", opts, "Bufferline", "bufferline_sort_ext", "Sort buffers by ext")
+    -- mapper.map("n", "bd", "<cmd>BufferLineSortByDirectory<CR>", opts, "Bufferline", "bufferline_sort_dir", "Sort buffers by dir")
+
+    -- vim-test
+    mapper.map("n", "<leader>ts", "<cmd>TestSuite<cr>", opts, "Tests", "test_suite", "Run test suite")
+    mapper.map("n", "<leader>tl", "<cmd>TestLast<cr>", opts, "Tests", "test_last", "Re-run previous test")
+    mapper.map("n", "<leader>tf", "<cmd>TestFile<cr>", opts, "Tests", "test_file", "Run current test file")
+    mapper.map("n", "<leader>tn", "<cmd>TestNearest<cr>", opts, "Tests", "test_nearest", "Run nearest test")
+    mapper.map("n", "<leader>tg", "<cmd>TestVisit<cr>", opts, "Tests", "test_visit", "Go to test")
 end
 
 return mappings
