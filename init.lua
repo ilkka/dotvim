@@ -6,7 +6,7 @@ local vim = vim
 vim.cmd([[
     rshada!
     doautocmd BufRead
-    syntax on
+    syntax enable
     filetype on
     filetype plugin indent on
 ]])
@@ -14,22 +14,22 @@ vim.cmd([[
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ','
 vim.opt.expandtab = true
-vim.opt.shiftwidth = 4
-vim.opt.softtabstop = 4
-vim.opt.signcolumn = 'yes:2'
-vim.opt.relativenumber = true
-vim.opt.number = true
-vim.opt.termguicolors = true
-vim.opt.spell = true
-vim.opt.title = true
 vim.opt.ignorecase = true
-vim.opt.smartcase = true
-vim.cmd("syntax enable")
-vim.opt.wildmode = "longest:full,full"
 vim.opt.list = true
 vim.opt.listchars = "tab:► ,trail:·,nbsp:·,precedes:,extends:"
+vim.opt.mouse = 'nv'
+vim.opt.number = true
+vim.opt.relativenumber = true
 vim.opt.scrolloff = 8
+vim.opt.shiftwidth = 4
 vim.opt.sidescrolloff = 8
+vim.opt.signcolumn = 'yes:2'
+vim.opt.smartcase = true
+vim.opt.softtabstop = 4
+vim.opt.spell = true
+vim.opt.termguicolors = true
+vim.opt.title = true
+vim.opt.wildmode = "longest:full,full"
 
 require('plugins')
 
