@@ -26,7 +26,9 @@ vim.opt.sidescrolloff = 8
 vim.opt.signcolumn = 'yes:2'
 vim.opt.smartcase = true
 vim.opt.softtabstop = 4
-vim.opt.spell = true
+-- TODO: figure out how to do code spellcheck and how to
+-- enable this for text files non-intrusively.
+-- vim.opt.spell = true
 vim.opt.termguicolors = true
 vim.opt.title = true
 vim.opt.wildmode = "longest:full,full"
