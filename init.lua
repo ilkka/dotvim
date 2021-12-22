@@ -14,6 +14,7 @@ vim.cmd([[
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ','
 vim.opt.expandtab = true
+-- vim.opt.guicursor = 'n-v-c-sm:hor25,i-ci-ve:ver25,r-cr-o:hor25'
 vim.opt.ignorecase = true
 vim.opt.list = true
 vim.opt.listchars = "tab:► ,trail:·,nbsp:·,precedes:,extends:"
