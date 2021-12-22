@@ -34,6 +34,7 @@ function mappings.define_mappings(mapper)
     mapper.map("n", "<leader>fb", "<cmd>Telescope git_branches<CR>", opts, "Editor", "telescope_git_branches", "Find in branches")
     mapper.map("n", "<leader>fc", "<cmd>Telescope git_commits<CR>", opts, "Editor", "telescope_git_commits", "Find in commits")
     mapper.map("n", "<leader>fC", "<cmd>Telescope git_bcommits<CR>", opts, "Editor", "telescope_git_bcommits", "Find in branch commits")
+    mapper.map("n", "<leader>fh", "<cmd>Telescope help_tags<CR>", opts, "Editor", "telescope_help_tags", "Find in help tags")
 
     -- Fugitive
     mapper.map("n", "<leader>gs", "<cmd>Git<CR>", opts, "Git", "git_status", "Git status")
