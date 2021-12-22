@@ -16,6 +16,9 @@ function mappings.define_mappings(mapper)
 
     " open nonexistent files with gf
     map gf <cmd>edit <cfile><cr>
+
+    " terminal normal mode with double esc
+    :tnoremap <Esc><Esc> <C-\><C-n>
     ]])
 
     -- Basic editor functions
