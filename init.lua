@@ -10,7 +10,7 @@ vim.cmd([[
     filetype on
     filetype plugin indent on
 
-    if has('win32') | set shell=\"pwsh.exe\" | endif
+    if has('win32') | set shell=pwsh.exe | endif
 ]])
 
 vim.g.mapleader = ' '
