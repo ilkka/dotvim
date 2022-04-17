@@ -30,8 +30,6 @@ return require('packer').startup(function(use)
     use(require('plugins.plugin_vim-airline'))
     use(require('plugins.plugin_vim-dispatch'))
     use(require('plugins.plugin_vim-floaterm'))
-    -- Turns out this is a) unnecessary and b) messing with the lsp setup
-    -- use(require('plugins.plugin_vim-fsharp'))
     use(require('plugins.plugin_vim-gitgutter'))
     use(require('plugins.plugin_vim-projectionist'))
     use(require('plugins.plugin_vim-test'))
