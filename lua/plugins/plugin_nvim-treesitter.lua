@@ -9,7 +9,8 @@ return {
                 "lua",
                 "json",
                 "javascript",
-                "typescript"
+                "typescript",
+                "markdown"
             },
             highlight = {
                 enable = true
