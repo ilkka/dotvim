@@ -66,10 +66,12 @@ function mappings.define_mappings(mapper)
     mapper.map("t", "<F12>", "<C-\\><C-n><cmd>FloatermToggle<CR>", opts, "Terminal", "floaterm_ttoggle", "Floaterm toggle")
 
     -- Bufferline
-    mapper.map("n", "]b", "<cmd>BufferLineCycleNext<CR>", opts, "Bufferline", "bufferline_next", "Move to next buffer")
-    mapper.map("n", "[b", "<cmd>BufferLineCyclePrev<CR>", opts, "Bufferline", "bufferline_prev", "Move to previous buffer")
-    mapper.map("n", "]B", "<cmd>BufferLineMoveNext<CR>", opts, "Bufferline", "bufferline_movenext", "Move buffer right")
-    mapper.map("n", "[B", "<cmd>BufferLineMovePrev<CR>", opts, "Bufferline", "bufferline_moveprev", "Move buffer left")
+    mapper.map("n", "<leader>bl", "<cmd>BufferLineCycleNext<CR>", opts, "Bufferline", "bufferline_next", "Move to next buffer")
+    mapper.map("n", "<leader>bh", "<cmd>BufferLineCyclePrev<CR>", opts, "Bufferline", "bufferline_prev", "Move to previous buffer")
+    mapper.map("n", "<leader>bL", "<cmd>BufferLineMoveNext<CR>", opts, "Bufferline", "bufferline_movenext", "Move buffer right")
+    mapper.map("n", "<leader>bH", "<cmd>BufferLineMovePrev<CR>", opts, "Bufferline", "bufferline_moveprev", "Move buffer left")
+    mapper.map("n", "<leader>bb", "<cmd>BufferLinePick<CR>", opts, "Bufferline", "bufferline_pick", "Switch to buffer")
+    mapper.map("n", "<leader>bd", "<cmd>BufferLinePickClose<CR>", opts, "Bufferline", "bufferline_pickclose", "Close buffer")
     -- these need better maps, can't stand the delay after a plain 'b'
     -- mapper.map("n", "be", "<cmd>BufferLineSortByExtension<CR>", opts, "Bufferline", "bufferline_sort_ext", "Sort buffers by ext")
     -- mapper.map("n", "bd", "<cmd>BufferLineSortByDirectory<CR>", opts, "Bufferline", "bufferline_sort_dir", "Sort buffers by dir")
